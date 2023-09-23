@@ -1,0 +1,473 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* font-family: 'Courier New', Courier, monospace; */
+    font-family: 'Arial Narrow', Arial, sans-serif;
+}
+
+body{
+    width: 100%;
+    position: relative;    
+}
+
+header{
+    width: 100%;
+    height: 150px;
+    /* background-color: #EFEFEF; */
+    box-shadow: 0px 0px 10px -5px black;
+}
+
+header .upperNav{    
+    width: 100%;
+    height: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 80px;
+}
+
+header .upperNav .logo{
+    display: flex;    
+    padding: 5px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+header .upperNav .fa-wallet{
+    font-size: 30px;
+}
+
+header .upperNav .fa-user, .fa-bag-shopping, .fa-magnifying-glass{
+    font-size: 20px;
+    margin-left: 10px;
+    cursor: pointer;
+    padding: 5px;
+}
+
+header .upperNav p{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-transform: uppercase;
+    font-size: 30px;
+    font-weight: 600;
+    margin-left: 5px;
+}
+
+header .lowerNav{
+   /* background-color: aqua; */
+   width: 100%;
+   height: 50%;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+
+header .lowerNav a{
+    text-decoration: none;
+    color: black;
+    margin: 0 20px;
+    height: 20px;
+    letter-spacing: 1px;
+}
+
+header .lowerNav a:hover{
+    border-bottom: 1px solid black;
+}
+
+section{
+    width: 100%;
+    height: 100vh;
+    position: relative;
+}
+
+section img{
+    width: 100%;
+    mix-blend-mode: darken;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    position: absolute;
+}
+
+.darkenOverlay{
+    width: 100%;
+    height: 81vh;
+    position: absolute;
+    background: rgba(0,0,0,0.6);
+}
+
+section .text{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;  
+    width: 40%;
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    /* border: 2px solid white; */
+}
+
+.text button{
+    border: 2px solid white;
+    background-color: transparent;
+    color: white;
+    padding: 10px 20px;
+    font-size: 18px;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: 0.2s;
+}
+
+.text button:hover{
+    background-color: white;
+    color: black;
+}
+
+.text p{
+    font-size: 20px;
+    opacity: 0.6;
+}
+.text h1{
+    font-size: 50px;
+    opacity: 0.8;
+}
+
+.catagories{
+    /* background-color: antiquewhite; */
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.catagories .catagHeading{
+    text-align: center;
+    width: 65%;
+}
+
+.catagories .catagHeading h2{
+    font-size: 30px;
+}
+
+.catagories .catagHeading p{
+    font-size: 20px;
+    line-height: 25px;
+    margin-top: 20px;
+    opacity: 0.7;
+}
+
+.products{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+ }
+
+.product{
+    position: relative;
+    width: 30%;
+    height: 85%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    overflow: hidden;
+}
+
+.product img{
+    width: 100%;
+    height: 100%;
+    transition: transform .3s ease;
+    position: relative;
+}
+
+.product:hover img, .fproduct:hover img{
+    cursor: pointer;
+    transform: scale(1.02);
+    opacity: 0.9;
+}
+
+.product a i{
+    transition: .2s step-end;
+}
+.product a:hover i{
+    cursor: pointer;
+    transform: scale(1.3);
+}
+
+.product a{
+    position: relative;
+    text-decoration: none;
+    color: black;
+    padding: 8px;
+    opacity: 0.8;    
+}
+
+.featuredProductsSection{
+    height: 160vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+.featureProductHeading{
+    width: 65%;
+    text-align: center;
+    margin-top: 50px;
+}
+.featureProductHeading h2{
+    font-size: 30px;
+}
+
+.featureProductHeading p{
+    font-size: 20px;
+    line-height: 25px;
+    margin-top: 20px;
+    opacity: 0.7;
+}
+
+
+.fproducts{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+    margin: 40px 0;
+}
+
+.fproduct{
+    position: relative;
+    width: 310px;
+    height: 355px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    /* border: 1px solid black; */
+    text-align: center;
+    overflow: hidden;
+    line-height: 30px;
+    margin-top: 30px;
+}
+
+.fproduct img{
+    width: 100%;
+    height: 100%;
+    transition: transform .3s ease;
+    position: relative;
+    /* border: 1px solid black; */
+}
+
+.fproduct h2{
+    font-size: 18px;
+    opacity: 0.6;
+    /* text-align: start; */
+}
+.fproduct p{
+    opacity: 0.8;
+    font-size: 14px;
+    /* text-align: start; */
+}
+
+.featuredProductsSection button{
+    border: 1px solid black;
+    padding: 15px 35px;
+    background-color: transparent;
+    color: black;
+    font-size: 18px;
+    cursor: pointer;
+    letter-spacing: 1px;
+    transition: .2s ease;
+}
+.featuredProductsSection button:hover{
+    background-color: black;
+    color: white;
+}
+
+
+
+.productdescription{
+   height: 350vh;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   margin-top: 50px;
+}
+.productdescription .demandedProduct{
+   width: 100%;
+   height: 100%;
+   display: flex;
+   align-items: center;
+   justify-content: space-evenly;
+
+}
+.productdescription .demandedProduct img{
+    width: 40%;
+    height: 90%;
+    position: relative;
+}
+
+.demandedProduct .productPurchasing{
+    width: 40%;
+    height: 90%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: space-evenly;    
+}
+
+.productPurchasing h1{
+    font-size: 22px;
+    opacity: 0.8;
+}
+
+.productPurchasing p{
+    font-size: 18px;
+    opacity: 0.7;
+    line-height: 30px;
+}
+
+.productPurchasing button{
+    border: none;
+    background-color: black;
+    color: white;
+    font-size: 17px;
+    padding: 15px 20px;
+    width: 130px;
+    cursor: pointer;
+}
+.productPurchasing button:hover{
+   opacity: 0.8;
+}
+
+.subscribeEmail{
+    width: 60%;
+    height: 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    margin: 100px 0px;
+}
+
+.subscribeEmail h1{
+    font-size: 40px;
+}
+.subscribeEmail p{
+    font-size: 20px;
+    opacity: 0.7;
+}
+.subscribeEmail input{
+    padding: 10px;
+    width: 350px;
+    font-size: 16px;
+    outline: none;
+}
+
+footer{
+    width: 100%;
+    height: 50vh;
+    border-top: 1px solid black;
+    border-color: rgba(0,0,0,0.2);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.footerTop{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.footerBottom{
+    width: 100%;
+    height: 40%;
+}
+
+footer .contact, footer .social, footer .links, footer .policies{   
+    width: 23%;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: start;
+    padding: 20px 10px;  
+}
+
+footer h3{
+    font-size: 23px;
+    opacity: 0.9;
+}
+footer .contact p, footer a{
+    font-size: 19px;
+    opacity: 0.7;
+    line-height: 22px;
+    margin-top: 15px;
+ }
+
+ footer a{
+    font-size: 16px;
+    opacity: 0.7;
+    margin-top: 10px;
+    text-decoration: none;
+    color: black;
+    padding: 2px;
+    
+ }
+
+ footer a:hover{
+    text-decoration: underline;
+ }
+.footerBottom{
+    height: 70%;
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    padding: 0 100px;
+}
+.footerBottomLeft{
+    width: 30%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: start;
+}
+
+.footerBottomLeft input{
+    outline: none;
+    padding: 10px;
+    width: 80%;
+    font-size: 18px;
+}
+.footerBottomLeft p{
+    font-size: 20px;
+    letter-spacing: 1px;
+    font-weight: 600;
+    opacity: 0.7;
+}
+
+.footerBottomRight{
+    width: 15%;
+    height: 50%;
+    text-align: end;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.footerBottomRight i{
+    font-size: 25px;
+    cursor: pointer;
+}
